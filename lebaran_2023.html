@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="tiktok_lebaranicon.png">
+  <title>Lebaran 2023</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="fixed" id="ok" data-ok="ok">
+    <div>
+      <h1>Selamat datang </h1>
+      <button onclick="exitPesan(document.getElementById('ok'))">Ok</button>
+    </div>
+  </div>
+  <audio src="tiktok_laguramadhan.mp3" id="audio" data-play="false"></audio>
+  <div class="cover" id="cover">
+    <div class="cek">
+      <input type="checkbox" name="" id="cek" onchange="cekRequest(this)">
+      <label for="cek">Full screen</label>
+    </div>
+    <div class="bgPilih">
+      <input type="text" name="" id="bgInput" placeholder="Pilih Bg" list="bg" onchange="gantiWallpaper(cvr,bgInput.value)">
+      <datalist id="bg">
+        <option value="satu.jpg">Bg 1</option>
+        <option value="dua.jpg">Bg 2</option>
+        <option value="tiga.jpg">Bg 3</option>
+      </datalist>
+    </div>
+    <div class="pesanTimbul" id="psnTimbul">
+      <div>
+        <span class="exit" onclick="exitPesan(document.getElementById('psnTimbul'))">X</span>
+        <img src="" alt="">
+        <p></p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="atas">
+        <div class="pesan">
+          <div class="c-pesan" data-hari="1">
+            <div class="penutup-c" onclick="belumWaktunya()">
+              h-1
+            </div>
+            <img src="tiktok_lebaranpesan.png" alt="" onclick="pesanTimbul('[h-1] ciee dah bulan puasa aja, yang semangat ya puasanya 🤭', 'tiktok_lebaranwow.gif')">
+          </div>
+          <div class="c-pesan" data-hari="9">
+            <div class="penutup-c" onclick="belumWaktunya()">
+              h-9
+            </div>
+            <img src="tiktok_lebaranpesan.png" alt="" onclick="pesanTimbul('[h-9] wih udah hari ke 9, kamu sangat hebat 👏', 'tiktok_lebaranjempol.gif')">
+          </div>
+          <div class="c-pesan" data-hari="17">
+            <div class="penutup-c" onclick="belumWaktunya()">
+              h-17
+            </div>
+            <img src="tiktok_lebaranpesan.png" alt="" onclick="pesanTimbul('[h-17] Banyakin baca Al-quran, ya 😁', 'tiktok_lebaranlove.gif')">
+          </div>
+          <div class="c-pesan" data-hari="19">
+            <div class="penutup-c" onclick="belumWaktunya()">
+              h-19
+            </div>
+            <img src="tiktok_lebaranpesan.png" alt="" onclick="pesanTimbul('[h-19] Sejauh ini dan kamu masih kuat puasanya, hebat sekali 🤗', 'tiktok_lebaranterkagum.gif')">
+          </div>
+          <div class="c-pesan" data-hari="23">
+            <div class="penutup-c" onclick="belumWaktunya()">
+              h-23
+            </div>
+            <img src="tiktok_lebaranpesan.png" alt="" onclick="pesanTimbul('[h-23] Waw pekan trakhir ternyata, aku harap kamu kuat sampai akhir 😍', 'tiktok_lebaranloncat.gif')">
+          </div>
+          <div class="c-pesan" data-hari="29">
+            <div class="penutup-c" onclick="belumWaktunya()">
+              h-29
+            </div>
+            <img src="tiktok_lebaranpesan.png" alt="" onclick="pesanTimbul('[h-29] Heheh sudah hari terakhir, perjalanan yang panjang untuk kita, dengan penuh ketabahan dan kesabaran kita berhasil sampai sejauh ini, I MISS YOU 🍊', 'tiktok_lebaranpelukan.gif')">
+          </div>
+
+        </div>
+        <div class="range">
+          <span class="ket-hari" id="ketHari">h-0</span>
+          <img src="tiktok_lebaran.png" alt="" id="runActor">
+          <img src="tiktok_lebaranfix.png" alt="" id="lebaran" class="awal">
+          <img src="tiktok_iconlebaranakhir.jpg" alt="" id="lebaran" class="akhir">
+          <div class="warna-range" id="range"></div>
+        </div>
+      </div>
+      <div class="bawah">
+        <div class="penutup"></div>
+        <span class="waktu">
+          <h1 id="hari"></h1>
+          <span class="ket">hari</span>
+        </span>
+        <span class="waktu">
+          <h1 id="jam"></h1>
+          <span class="ket">jam</span>
+        </span>
+        <span class="waktu">
+          <h1 id="menit"></h1>
+          <span class="ket">menit</span>
+        </span>
+        <span class="waktu">
+          <h1 id="detik"></h1>
+          <span class="ket">detik</span>
+        </span>
+      </div>
+    </div>
+    <h1 id="dev">Dibuat oleh HAKI || Ramadhan 2023</h1>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

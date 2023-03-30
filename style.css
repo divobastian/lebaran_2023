@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+.fixed {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0, .8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.fixed div {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 3px;
+}
+.fixed div h1 {
+  color: black;
+  font-size: 1.1em;
+  width: 100%;
+  text-align: center;
+}
+.fixed div button {
+  width: 30%;
+  padding: 4px;
+  font-weight: bold;
+}
+#ok {
+  animation: animBgpilih .6s forwards ease-out;
+}
+.cover {
+  width: 100%;
+  height: 100vh;
+  background-image: url('dua.jpg');
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.cek {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: 9;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: grey;
+  opacity: .5;
+  font-size: 10px;
+  font-family: arial;
+}
+.cek input, label {
+  cursor: pointer;
+}
+.cek input {
+  accent-color: #579BB1;
+  margin-right: 5px;
+  width: 10px;
+}
+.bgPilih {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+.bgPilih input {
+  padding: 0 0 0 5px;
+  outline: none;
+  width: 80px;
+  color: grey;
+}
+
+.pesanTimbul {
+  transition: .4s;
+  width: 0;
+  height: 0;
+  position: fixed;
+  z-index: -3;
+  background-color: rgba(0,0,0, .7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pesanTimbul div {
+  width: 200px;
+  min-height: 100px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255, .8);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  animation: animPesanBox .7s .4s forwards;
+}
+.pesanTimbul div .exit {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  color: white;
+  font-weight: bold;
+}
+.pesanTimbul div img {
+  width: 80px;
+}
+.pesanTimbul div p {
+  padding: 3px;
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+.content {
+  width: 330px;
+  background-color: rgba(255,255,255, .1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.content .atas {
+  width: 100%;
+  height: 400px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.atas .pesan {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  background-color: transparent;
+  flex-wrap: wrap;
+}
+.atas .range {
+  width: 90%;
+  height: 20px;
+  position: absolute;
+  bottom: 5%;
+  border-radius: 30px;
+  background-color: transparent;
+  border: 1.5px solid black;
+}
+
+.atas .pesan .c-pesan {
+  width: 70px;
+  height: 70px;
+  margin: 0 10px;
+  position: relative;
+  padding: 2px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.animPesan {
+  animation: animPesan 1s infinite ease-in-out;
+  transition: .4s;
+}
+.c-pesan img {
+  width: 100%;
+  margin-left: 3px;
+}
+.c-pesan .penutup-c {
+  position: absolute;
+  z-index: 3;
+  background-color: rgba(0,0,0, .5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+.atas .range .ket-hari {
+  background-color: white;
+  position: absolute;
+  font-size: 7px;
+  top: -60px;
+  padding: 0 3px;
+  left: 0;
+}
+#ketHariAkhir{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.atas .range img {
+  width: 50px;
+  position: absolute;
+  top: -55px;
+}
+.atas .range #lebaran {
+  right: 0;
+}
+.atas .range .akhir {
+  display: none;
+}
+.atas .range .warna-range {
+  width: 0;
+  height: 100%;
+  background-color: #20add9;
+  border-radius: 30px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .bawah {
+  width: 100%;
+  height: 200px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+.bawah .penutup {
+  z-index: 5;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+.bawah .waktu {
+  width: 70px;
+  height: 80px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+
+}
+.bawah .penutup, .waktu > * {
+  position: absolute;
+}
+
+.bawah .waktu .ket {
+  bottom: -20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+#dev{
+  position: absolute;
+  bottom: 4px;
+  font-size: 8px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: grey;
+}
+
+@keyframes animPesan {
+  0%,100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes animPesanBox {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animBgpilih {
+  0%,100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
